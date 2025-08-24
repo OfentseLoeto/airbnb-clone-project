@@ -111,3 +111,19 @@ Why: Prevents common security vulnerabilities such as SQL injection and cross-si
 6. Secure Payments
 Payment processing will follow PCI-DSS compliance and rely on trusted third-party providers.  
 Why: Ensures financial transactions remain safe and reduces the risk of fraud.
+
+CI/CD Pipeline
+
+A CI/CD (Continuous Integration and Continuous Deployment) pipeline automates the process of building, testing, and deploying the application. 
+This ensures that every change made to the codebase is verified and delivered quickly, reducing errors and improving overall development efficiency.
+
+CI/CD is important for this project because it:
+- Ensures consistent code quality by running automated tests on each commit.
+- Speeds up deployment with automated workflows.
+- Reduces human error and makes the release process more reliable.
+- Provides faster feedback for developers, enabling quicker fixes and improvements.
+
+Tools
+- GitHub Actions: Automates testing, builds, and deployment workflows directly from the repository.  
+- Docker: Ensures consistent application environments across development, testing, and production.  
+- (Optional) Jenkins / Travis CI: Alternative CI/CD tools for managing pipelines.
