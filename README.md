@@ -28,3 +28,33 @@ Backend Developer: Responsible for implementing API endpoints, database schemas,
 Database Administrator: Manages database design, indexing, and optimizations.
 DevOps Engineer: Handles deployment, monitoring, and scaling of the backend services.
 QA Engineer: Ensures the backend functionalities are thoroughly tested and meet quality standards.
+
+Database Designs
+
+Entities:
+Users
+- Fields: `id`, `name`, `email`, `password`, `role` (host/guest)
+- Relations: A user can host multiple properties and make multiple bookings.
+
+Properties
+- Fields: `id`, `user_id` (host), `title`, `location`, `price_per_night`
+- Relations: A property belongs to one host (user) and can have multiple bookings and reviews.
+
+Bookings
+- Fields: `id`, `user_id` (guest), `property_id`, `start_date`, `end_date`
+- Relations: A booking belongs to one user (guest) and one property.
+
+Reviews
+- Fields: `id`, `user_id`, `property_id`, `rating`, `comment`
+- Relations: A review is written by a user for a specific property.
+
+Payments
+- Fields: `id`, `booking_id`, `amount`, `status`, `payment_date`
+- Relations: A payment is linked to one booking.
+
+Relationship Overview:
+
+- A User can host multiple Properties.  
+- A User (as guest) can create multiple Bookings.  
+- A Property can have many Bookings and Reviews.  
+- A Booking has one Payment.
