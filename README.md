@@ -62,7 +62,7 @@ Relationship Overview:
 Feature Breakdown
 
 1. API Documentation
-The project uses the **OpenAPI standard** for clear and consistent API documentation, ensuring easy integration for developers. Both **Django REST Framework** and **GraphQL** are supported, offering flexibility for CRUD operations and custom queries.
+The project uses the OpenAPI standard for clear and consistent API documentation, ensuring easy integration for developers. Both Django, REST Framework and GraphQL are supported, offering flexibility for CRUD operations and custom queries.
 
 2. User Authentication
 Users can register, log in, and manage their profiles through dedicated endpoints. This ensures secure access and allows the system to distinguish between hosts and guests.
@@ -81,3 +81,33 @@ Users can post and manage reviews for properties they have stayed at. This foste
 
 7. Database Optimizations
 Indexes and caching strategies are implemented to improve query performance and reduce database load. This ensures the application remains scalable and efficient as data grows.
+
+API Security
+
+Securing the backend APIs is a critical part of the project to protect user data, ensure trust, and maintain system reliability. 
+
+The following measures will be implemented:
+
+1. Authentication
+Only verified users can access protected endpoints using secure authentication mechanisms (e.g., JWT tokens or OAuth2).  
+Why: Prevents unauthorized access and ensures only valid users interact with the system.
+
+2. Authorization
+Role-based access control will restrict what actions users can perform (e.g., only hosts can create properties, only guests can book).  
+Why: Protects resources by ensuring users only perform actions aligned with their roles.
+
+3. Rate Limiting
+Limits the number of requests a user can make in a given time frame.  
+Why: Prevents abuse such as brute-force login attempts or denial-of-service (DoS) attacks.
+
+4. Data Encryption
+Sensitive data such as passwords and payment details will be encrypted in transit (HTTPS/TLS) and at rest.  
+Why: Protects confidential information from being exposed to attackers.
+
+5. Input Validation
+All input will be validated and sanitized before being processed by the backend.  
+Why: Prevents common security vulnerabilities such as SQL injection and cross-site scripting (XSS).
+
+6. Secure Payments
+Payment processing will follow PCI-DSS compliance and rely on trusted third-party providers.  
+Why: Ensures financial transactions remain safe and reduces the risk of fraud.
