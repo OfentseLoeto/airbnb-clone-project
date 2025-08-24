@@ -58,3 +58,26 @@ Relationship Overview:
 - A User (as guest) can create multiple Bookings.  
 - A Property can have many Bookings and Reviews.  
 - A Booking has one Payment.
+
+Feature Breakdown
+
+1. API Documentation
+The project uses the **OpenAPI standard** for clear and consistent API documentation, ensuring easy integration for developers. Both **Django REST Framework** and **GraphQL** are supported, offering flexibility for CRUD operations and custom queries.
+
+2. User Authentication
+Users can register, log in, and manage their profiles through dedicated endpoints. This ensures secure access and allows the system to distinguish between hosts and guests.
+
+3. Property Management
+Hosts can create, update, retrieve, and delete property listings. This feature enables users to showcase properties with essential details like location, price, and availability.
+
+4. Booking System
+Guests can make, update, and manage bookings for available properties. It includes check-in and check-out details, ensuring smooth reservation handling.
+
+5. Payment Processing
+Payments are linked directly to bookings, allowing secure and traceable transactions. This ensures both guests and hosts have a reliable way to handle financial exchanges.
+
+6. Review System
+Users can post and manage reviews for properties they have stayed at. This fosters trust in the platform by providing feedback for both hosts and future guests.
+
+7. Database Optimizations
+Indexes and caching strategies are implemented to improve query performance and reduce database load. This ensures the application remains scalable and efficient as data grows.
